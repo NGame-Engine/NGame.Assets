@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+    <PropertyGroup>
+        <NgAssetListPath>$(SolutionDir).ngame/assets/$(MSBuildProjectName).g.ngassetlist</NgAssetListPath>
+    </PropertyGroup>
+
+</Project>

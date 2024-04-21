@@ -1,0 +1,31 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target
+        Name="NgAssetsPacking_Build"
+        BeforeTargets="NgPlatformBuild"
+        Inputs="@(NgAssetLists)"
+        Outputs="$(BaseIntermediateOutputPath)ngame/assets/timestamp"
+    >
+        <CallTarget Targets="_NgAssetsPacking_ResolveProperties"/>
+        <CallTarget Targets="NgAssetsResolveUsages"/>
+        <CallTarget Targets="NgAssetsPack"/>
+
+        <MakeDir Directories="$(BaseIntermediateOutputPath)ngame/assets/"/>
+        <Touch Files="$(BaseIntermediateOutputPath)ngame/assets/timestamp" AlwaysCreate="true"/>
+    </Target>
+
+    <Target Name="_NgAssetsPacking_ResolveProperties">
+        <PropertyGroup>
+            <NgAssetsPackOutputDirectory Condition=" '$(NgAssetsPackOutputDirectory)' == ''">$(ProjectDir)$(OutputPath)_assetpacks/</NgAssetsPackOutputDirectory>
+        </PropertyGroup>
+    </Target>
+
+
+    <Target
+        Name="NgAssetsPacking_Clean"
+        BeforeTargets="Clean"
+        DependsOnTargets="_NgAssetsPacking_ResolveProperties">
+        <RemoveDir Directories="$(NgAssetsPackOutputDirectory)"/>
+    </Target>
+
+</Project>

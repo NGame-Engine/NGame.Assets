@@ -1,0 +1,71 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target
+        Name="_NGameAssetsDetection_AfterBuild"
+        BeforeTargets="AfterBuild">
+        <CallTarget Targets="NGameAssetsDetection_EnsureAssetFile"/>
+        <CallTarget Targets="_NGameAssetsDetection_FindFiles"/>
+        <CallTarget Targets="NGameAssetsDetection_WriteList"/>
+    </Target>
+
+
+    <Target
+        Name="NGameAssetsDetection_EnsureAssetFile"
+        Inputs="@(NgAssetDataFile)"
+        Outputs="@(NgAssetDataFile -> '%(Identity).ngasset')">
+        <Message
+            Condition=" !Exists( @(NgAssetDataFile -> '%(Identity).ngasset') )"
+            Importance="high"
+            Text="Creating %(NgAssetDataFile.Identity).ngasset"/>
+
+        <WriteLinesToFile
+            Condition=" !Exists( @(NgAssetDataFile -> '%(Identity).ngasset') )"
+            File="%(NgAssetDataFile.Identity).ngasset"
+            Lines="{%0a  &quot;$asset&quot;: &quot;%(NgAssetDataFile.Discriminator)&quot;,%0a  &quot;Id&quot;: &quot;$([System.Guid]::NewGuid())&quot;%0a}"
+            Overwrite="true"
+            Encoding="Unicode"
+        />
+    </Target>
+
+
+    <Target Name="_NGameAssetsDetection_FindFiles">
+        <ItemGroup>
+            <NgAsset Include="**/*.ngasset" Exclude="$(BaseOutputPath)/**/*;$(BaseIntermediateOutputPath)/**/*"/>
+            <NgAsset
+                Update="@(NgAsset)"
+                Condition="Exists('%(RelativeDir)%(FileName)')"
+                DataFile="%(RelativeDir)%(FileName)"
+                DataFileExtension="$( [System.IO.Path]::GetExtension('%(FileName)').ToLower() )"
+            />
+        </ItemGroup>
+        <Message Text="NGame assets in project $(ProjectName): @(NgAsset)"/>
+    </Target>
+
+
+    <Target
+        Name="NGameAssetsDetection_WriteList"
+        Inputs="@(NgAsset);@(NgAsset -> '%(DataFile)')"
+        Outputs="$(NgAssetListPath)"
+    >
+        <WriteLinesToFile
+            Lines="$(ProjectDir)"
+            File="$(NgAssetListPath)"
+            Overwrite="true"
+            Encoding="Unicode"/>
+        <WriteLinesToFile
+            Lines="@(NgAsset -> '%(Identity)//%(DataFile)')"
+            File="$(NgAssetListPath)"
+            Overwrite="false"
+            Encoding="Unicode"/>
+        <Message Text="Updated NGame asset list in project $(MSBuildProjectName)"/>
+    </Target>
+
+
+    <Target
+        Name="_NGameAssetsDetection_Clean"
+        BeforeTargets="Clean"
+    >
+        <Delete Files="$(NgAssetListPath)"/>
+    </Target>
+
+</Project>
