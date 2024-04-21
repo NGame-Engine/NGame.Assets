@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGame.Assets.UsageFinder", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGame.Assets.UsageFinder.Tests", "NGame.Assets.UsageFinder.Tests\NGame.Assets.UsageFinder.Tests.csproj", "{DE92994B-8B06-48E0-95C7-723BA1780779}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGame.Example.AssetsInPackage", "NGame.Example.AssetsInPackage\NGame.Example.AssetsInPackage.csproj", "{5F687910-03EF-4032-9D2D-10173D3826F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{DE92994B-8B06-48E0-95C7-723BA1780779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE92994B-8B06-48E0-95C7-723BA1780779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE92994B-8B06-48E0-95C7-723BA1780779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F687910-03EF-4032-9D2D-10173D3826F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F687910-03EF-4032-9D2D-10173D3826F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F687910-03EF-4032-9D2D-10173D3826F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F687910-03EF-4032-9D2D-10173D3826F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
