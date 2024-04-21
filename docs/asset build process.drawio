@@ -1,0 +1,48 @@
+<mxfile host="Electron" modified="2024-04-20T16:30:27.270Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="E7gJJ0n6t7wR8_o0qgvT" version="22.1.21" type="device">
+  <diagram name="Page-1" id="tGC6oJ7xi20cNGv6dVPW">
+    <mxGraphModel dx="1674" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PHNM4hUb2vYnssggWODr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PHNM4hUb2vYnssggWODr-1" target="PHNM4hUb2vYnssggWODr-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-1" value="AfterBuild" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PHNM4hUb2vYnssggWODr-2" target="PHNM4hUb2vYnssggWODr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-2" value="Find File Endings" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PHNM4hUb2vYnssggWODr-3" target="PHNM4hUb2vYnssggWODr-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-3" value="Ensure asset files&lt;br&gt;have .ngasset files" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-4" value="All asset files have .ngasset files" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="360" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-5" value="All paths to asset files are written down in file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="640" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-6" value="NGameAssetsWriteList" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PHNM4hUb2vYnssggWODr-7" target="PHNM4hUb2vYnssggWODr-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-9" value="BeforeTargets" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="PHNM4hUb2vYnssggWODr-8">
+          <mxGeometry x="-0.2857" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PHNM4hUb2vYnssggWODr-7" value="File Converter&lt;br&gt;Plugin" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
