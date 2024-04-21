@@ -6,14 +6,30 @@
         <Nullable>enable</Nullable>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <RootNamespace>NGame</RootNamespace>
+
+        <PackageId>NGame.Assets</PackageId>
+        <VersionPrefix>0.5.0</VersionPrefix>
+        <Authors>NGame Contributors</Authors>
+        <Description>A Game Engine Embracing the .NET Ecosystem</Description>
+        <Copyright>Copyright © NGame Contributors 2024</Copyright>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/NGame-Engine/NGame/wiki</PackageProjectUrl>
+        <PackageIcon>nuget-logo.png</PackageIcon>
+        <RepositoryUrl>https://github.com/NGame-Engine/NGame</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>Game Engine</PackageTags>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\NGame.Assets.Abstractions\NGame.Assets.Abstractions.csproj"/>
+        <None Include="nuget-logo.png" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Assets\" />
+        <ProjectReference Include="..\NGame.Assets.Abstractions\NGame.Assets.Abstractions.csproj"/>
     </ItemGroup>
 
 </Project>
