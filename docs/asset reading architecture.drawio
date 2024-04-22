@@ -1,0 +1,69 @@
+<mxfile host="Electron" modified="2024-02-08T21:53:47.360Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="YD4nm_bJDB1_D1U9IMYX" version="22.1.21" type="device">
+  <diagram name="Page-1" id="gFMeJlD1aOjjCJX-qhwL">
+    <mxGraphModel dx="1434" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="O-ya8GaMwb6gl08_Egmc-1" target="O-ya8GaMwb6gl08_Egmc-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LslBZITlGXRMd77W_s-w-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="O-ya8GaMwb6gl08_Egmc-1" target="O-ya8GaMwb6gl08_Egmc-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LslBZITlGXRMd77W_s-w-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="O-ya8GaMwb6gl08_Egmc-1" target="LslBZITlGXRMd77W_s-w-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LslBZITlGXRMd77W_s-w-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="O-ya8GaMwb6gl08_Egmc-1" target="O-ya8GaMwb6gl08_Egmc-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-1" value="AssetAccessor" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="O-ya8GaMwb6gl08_Egmc-2" target="O-ya8GaMwb6gl08_Egmc-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-8" value="IEnumerable" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O-ya8GaMwb6gl08_Egmc-7" vertex="1" connectable="0">
+          <mxGeometry x="-0.0889" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-2" value="AssetProcessorCollection&lt;br&gt;Gathers processors in one place" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-3" value="AssetRegistry&lt;br&gt;Allows caching" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-6" value="IAssetProcessor&lt;br&gt;Defines how to load assets of a type" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="O-ya8GaMwb6gl08_Egmc-9" target="O-ya8GaMwb6gl08_Egmc-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-9" value="ITableOfContentsProvider&lt;br&gt;Unifies and chaches TOC access" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="320" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-11" value="IAssetStreamProvider&lt;br&gt;Platform specific asset retrieval" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="O-ya8GaMwb6gl08_Egmc-18" target="O-ya8GaMwb6gl08_Egmc-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-18" value="AssetSerializer&lt;br&gt;Creates, caches and uses JSON options" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O-ya8GaMwb6gl08_Egmc-25" value="AssetDeserializerOptionsFactory&lt;br&gt;Standardizes JSON options" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="360" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LslBZITlGXRMd77W_s-w-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="LslBZITlGXRMd77W_s-w-15" target="O-ya8GaMwb6gl08_Egmc-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LslBZITlGXRMd77W_s-w-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="LslBZITlGXRMd77W_s-w-15" target="O-ya8GaMwb6gl08_Egmc-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LslBZITlGXRMd77W_s-w-15" value="AssetUnpacker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
