@@ -22,7 +22,7 @@ public class JsonNodeAssetIdFinder : IJsonNodeAssetIdFinder
 		{
 			JsonArray jsonArray => jsonArray.SelectMany(FindReferencedIdsRecursively),
 			JsonObject jsonObject => GetChildren(jsonObject),
-			_ => Enumerable.Empty<Guid>()
+			_ => []
 		};
 
 		foreach (var id in ids)
@@ -37,6 +37,13 @@ public class JsonNodeAssetIdFinder : IJsonNodeAssetIdFinder
 		if (jsonObject.ContainsKey(AssetConventions.TypeDiscriminatorPropertyName))
 		{
 			var idNode = jsonObject[AssetConventions.AssetIdPropertyName]!;
+			var id = idNode.GetValue<Guid>();
+			yield return id;
+		}
+
+		if (jsonObject.ContainsKey(AssetConventions.PrefabIdPropertyName))
+		{
+			var idNode = jsonObject[AssetConventions.PrefabIdPropertyName]!;
 			var id = idNode.GetValue<Guid>();
 			yield return id;
 		}
